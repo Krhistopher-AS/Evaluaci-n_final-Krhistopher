@@ -21,5 +21,19 @@ int main()
     cout << "Ingrese un numero:" << endl;
     cin >> num;
     // Comience a programar desde aquí
+   
+    if (esPrimo(num)) {
+       std::cout << "Es estrobogramático";
+     } else {
+    std::cout << "NO es estrobogramático";
+     }
+        }
+
+    bool esPrimo(int numero) {
+  
+  if (num == 0 || num == 1 || num == 4) return false;
+  for (int x = 2; x < num / 2; x++) {
+    if (num % x == 0) return false;
+  }
     return 0;
 }
